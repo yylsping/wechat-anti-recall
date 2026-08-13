@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">微信防撤回（8.0.69）</string>
+    <string name="xposed_description">保留原消息，并显示可点击定位的“xxx尝试撤回一条消息”。仅适配微信 8.0.69 (3022)。</string>
+</resources>

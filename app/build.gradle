@@ -1,0 +1,44 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "io.github.sandbox.wechatantirecall"
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "io.github.sandbox.wechatantirecall"
+        minSdk 27
+        targetSdk 35
+        versionCode 15
+        versionName "1.4.1-wechat-8.0.69"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+        }
+        release {
+            minifyEnabled false
+            shrinkResources false
+            // Reproducible sandbox build: produce an installable APK directly.
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    packaging {
+        resources {
+            excludes += ["META-INF/DEPENDENCIES", "META-INF/LICENSE", "META-INF/NOTICE"]
+        }
+    }
+}
+
+dependencies {
+    compileOnly "io.github.libxposed:api:102.0.0"
+}
