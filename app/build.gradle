@@ -1,5 +1,13 @@
+import java.util.Properties
+
 plugins {
     id "com.android.application"
+}
+
+def signingPropertiesFile = rootProject.file("signing-private/signing.properties")
+def signingProperties = new Properties()
+if (signingPropertiesFile.isFile()) {
+    signingPropertiesFile.withInputStream { signingProperties.load(it) }
 }
 
 android {
@@ -14,6 +22,18 @@ android {
         versionName "1.4.1-wechat-8.0.69"
     }
 
+    signingConfigs {
+        release {
+            if (signingPropertiesFile.isFile()) {
+                storeFile rootProject.file(signingProperties.getProperty("storeFile"))
+                storePassword signingProperties.getProperty("storePassword")
+                keyAlias signingProperties.getProperty("keyAlias")
+                keyPassword signingProperties.getProperty("keyPassword")
+                storeType "PKCS12"
+            }
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
@@ -22,8 +42,7 @@ android {
         release {
             minifyEnabled false
             shrinkResources false
-            // Reproducible sandbox build: produce an installable APK directly.
-            signingConfig signingConfigs.debug
+            signingConfig signingPropertiesFile.isFile() ? signingConfigs.release : null
         }
     }
 
