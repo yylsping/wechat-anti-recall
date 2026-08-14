@@ -17,7 +17,7 @@
 | 目标应用 | 微信 8.0.69（3022） |
 | Android | 8.1（API 27）及以上 |
 | 框架 | 支持 libxposed Modern API 102 的 LSPosed |
-| 模块版本 | 1.4.1（versionCode 15） |
+| 模块版本 | 1.4.2（versionCode 16） |
 
 模块依赖微信内部类与方法签名，不支持其他微信版本。版本不匹配时不会安装业务 Hook。
 

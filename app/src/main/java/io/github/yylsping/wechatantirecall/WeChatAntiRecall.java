@@ -1,4 +1,4 @@
-package io.github.sandbox.wechatantirecall;
+package io.github.yylsping.wechatantirecall;
 
 import android.app.Application;
 import android.content.Context;

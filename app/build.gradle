@@ -11,15 +11,15 @@ if (signingPropertiesFile.isFile()) {
 }
 
 android {
-    namespace "io.github.sandbox.wechatantirecall"
+    namespace "io.github.yylsping.wechatantirecall"
     compileSdk 36
 
     defaultConfig {
-        applicationId "io.github.sandbox.wechatantirecall"
+        applicationId "io.github.yylsping.wechatantirecall"
         minSdk 27
         targetSdk 35
-        versionCode 15
-        versionName "1.4.1-wechat-8.0.69"
+        versionCode 16
+        versionName "1.4.2-wechat-8.0.69"
     }
 
     signingConfigs {

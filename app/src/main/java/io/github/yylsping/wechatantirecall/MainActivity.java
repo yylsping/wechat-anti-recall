@@ -1,4 +1,4 @@
-package io.github.sandbox.wechatantirecall;
+package io.github.yylsping.wechatantirecall;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 public final class MainActivity extends Activity {
     private static final String LAUNCHER_ALIAS =
-            "io.github.sandbox.wechatantirecall.LauncherAlias";
+            "io.github.yylsping.wechatantirecall.LauncherAlias";
 
     private Button shortcutButton;
 
