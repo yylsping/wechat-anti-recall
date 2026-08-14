@@ -26,6 +26,9 @@ keystore.properties
 *-source.zip
 dist/
 
+# Local maintenance notes
+/XPOSED_UPDATE.md
+
 # OS files
 .DS_Store
 Thumbs.db
